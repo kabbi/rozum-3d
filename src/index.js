@@ -1,12 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import 'three/examples/js/libs/inflate.min.js';
+import 'three/examples/js/controls/OrbitControls';
+import 'three/examples/js/loaders/FBXLoader';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+import initGUI from './hand/gui';
+import initScene from './hand/scene';
+import initNetwork from './hand/network';
+
+const app = {
+  animating: false,
+  handLoaded: false,
+};
+
+initGUI(app);
+initScene(app);
+initNetwork(app);
