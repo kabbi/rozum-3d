@@ -1,7 +1,7 @@
 import shortID from 'shortid';
 
 export default app => {
-  const ws = new WebSocket(`ws://${window.location.host}/`);
+  const ws = new WebSocket(`wss://${window.location.host}/`);
 
   const send = data => ws.send(JSON.stringify(data));
   const parse = data => JSON.parse(data);
@@ -20,7 +20,7 @@ export default app => {
     const [cmd, ...args] = parse(event.data);
     switch (cmd) {
       case 'init-ok':
-        app.showURL(`http://localhost:5467/${sessionID}/`);
+        app.showURL(`https://${window.location.host}/api/${sessionID}/`);
         break;
       case 'init-error':
         app.showURL('Cannot create session');

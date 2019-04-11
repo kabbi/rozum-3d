@@ -21,13 +21,6 @@ export default app => {
 
   guiState.url = '';
 
-  // const connectionFolder = gui.addFolder('Connection');
-  // connectionFolder.add(options, 'url').name('API Url');
-  // connectionFolder.add(options, 'refreshRate', 10).name('Refresh rate');
-  // statusGUI = connectionFolder.add(options, 'status').name('Status');
-  // connectionFolder.add(options, 'reconnect').name('Update settings');
-  // const poseFolder = gui.addFolder('Pose');
-
   gui.add(guiState, 'url').name('Server url');
   gui.add(guiState, 'animate').name('Animate!');
 

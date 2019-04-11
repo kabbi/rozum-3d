@@ -1,0 +1,5 @@
+{
+  "name": "rozum-3d",
+  "restart": "on-failure:2",
+  "domain": "rozum-3d.kabbi.dev"
+}
