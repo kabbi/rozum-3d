@@ -3,6 +3,8 @@ Rozum 3D
 
 Proof of concept 3D robot arm simulator. Really simple for now, only supports one endpoint (`/pose`). Using THREE.js, fbx hand model, websockets for commands and simple express server to proxy robot calls to front-end side.
 
+Robot arm and it's 3D model courtesy of [Rozum](https://rozum.com/robotic-arm/).
+
 Try yourself:
 - open https://rozum-3d.kabbi.dev
 - copy your server url
